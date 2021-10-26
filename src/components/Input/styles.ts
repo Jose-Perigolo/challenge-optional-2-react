@@ -1,10 +1,12 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+import { InputStylesProps } from "../../types";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
 
   background: #fff;
+  border: 1px solid transparent;
   border-radius: 8px;
   padding: 18px 24px;
   width: 100%;
@@ -21,14 +23,14 @@ export const Container = styled.div`
     line-height: 36px;
   }
 
-  ${props =>
+  ${(props: InputStylesProps) =>
     props.isFocused &&
     css`
       color: #ff9000;
       border-color: #ff9000;
     `}
 
-  ${props =>
+  ${(props: InputStylesProps) =>
     props.isFilled &&
     css`
       color: #ff9000;
